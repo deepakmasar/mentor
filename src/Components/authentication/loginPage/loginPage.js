@@ -17,17 +17,17 @@ export class loginPage extends Component {
         console.log(this.state.password);
 
         let url = "http://localhost:3000/api/auth/login";
-        let data = fetch(url,{
+        let data =  await fetch(url,{
             method:"POST",
             headers:{
                 "accept":"application/JSON",
                 "Content-type":"application/JSON",
                 // "Access-Control-Allow-Origin":"no-cors"
             },
-            body:{     
-                "email":this.username,
-                "password":this.password,
-            }
+            body: JSON.stringify({     
+                "email":this.state.username,
+                "password":this.state.password,
+            })
         });
         console.log(data);
 
