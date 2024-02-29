@@ -22,7 +22,7 @@ export class loginPage extends Component {
             headers:{
                 "accept":"application/JSON",
                 "Content-type":"application/JSON",
-                // "Access-Control-Allow-Origin":"no-cors"
+                "Access-Control-Allow-Origin":"no-cors"
             },
             body:{     
                 "email":this.username,
