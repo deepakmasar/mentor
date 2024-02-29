@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+// import Navbar from './Components/navigation.js';
+import LoginPage from './Components/authentication/loginPage/loginPage.js';
 import './App.css';
+import RegisterPage from './Components/authentication/registerPage/registerPage.js';
+import ForgotPasswordPage from './Components/authentication/forgotPasswordPage/forgotPasswordPage.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        {/* <Navbar/> */}
+        <LoginPage/>
+        <RegisterPage/>
+        <ForgotPasswordPage/>
+      </div>
+    )
+  }
 }
 
-export default App;
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <>
+//       <LoginPage/>
+//       <RegisterPage/>
+//       <ForgotPasswordPage/>
+//       </>    
+//     </div>
+//   );
+// }
+// export default App;
